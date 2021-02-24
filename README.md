@@ -5,18 +5,18 @@ Após concluir a Formação Node.js com Express da Alura, resolvi por em prátic
 ------------
 
 
-### 🚀 Tecnologias Usadas
+### ⭐️ Tecnologias Usadas
 - NodeJS
 - Typescript
 - MySQL
 - Redis
 - JWT
 
-### :tw-26a1: Padrões de Projeto Usados
+### ⚡️ Padrões de Projeto Usados
 - MVC (Model, View, Controller)
 - Repository (Arquivos que contém as querys de requisição ao banco)
 
-### :tw-2757: Nomenclatura além dos Padrões de Projeto
+### 📌 Nomenclatura das demais pastas
 - Infraestracute (Database e Redis)
 - Typed (Tipos das variáveis do banco)
 - Middlewares (Contendo a autenticação dos tokens)
@@ -24,7 +24,7 @@ Após concluir a Formação Node.js com Express da Alura, resolvi por em prátic
 
 ------------
 
-### Instalando Dependências
+### 🚀 Instalando Dependências e Executando
 ```javascript
 npm install
 ```
