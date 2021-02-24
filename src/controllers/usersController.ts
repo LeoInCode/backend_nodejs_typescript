@@ -1,14 +1,23 @@
 import { Request, Response } from 'express';
 import UserModel from "../models/usersModel"
+import { User } from '../typed/typed';
 import tokens from './token'
 
 export const insertUser = async (req: Request, res: Response) => {  
+  const user: User = {
+    name: req.body.name,
+    email: req.body.email,
+    passwordHash: req.body.passwordHash,
+    abilitys: req.body.abilitys,
+    photo: req.body.photo,
+    emailVerify: req.body.emailVerify,
+  }
   try {
-    const id = await UserModel.prototype.insert(req.body);
+    const id = await UserModel.prototype.insert(user);
     
     const token = tokens.verifyEmail.create(id) //cria o token
     const address = generateAddress('/api/users/verify_email/',token) //gera o endereço para enviar por email
-    UserModel.prototype.sendEmail(address,req.body) //envia o email
+    UserModel.prototype.sendEmail(address,user) //envia o email
 
     return res.status(201).json({message: 'Inserido com sucesso'});
   } catch (error) {
@@ -38,6 +47,14 @@ export const getUserById = async (req: Request, res: Response) => {
 
 export const editUser = async (req: Request, res: Response) => {
   const id = parseInt(req.params.id)
+  const user: User = {
+    name: req.body.name,
+    email: req.body.email,
+    passwordHash: req.body.passwordHash,
+    abilitys: req.body.abilitys,
+    photo: req.body.photo,
+    emailVerify: req.body.emailVerify,
+  }
   try {
     const results = await UserModel.prototype.editUser(req.body, id);
     return res.status(200).json(results);

@@ -6,7 +6,6 @@ export type User = {
   abilitys?: string | null
   photo: string | null
   emailVerify: number
-  permission: string | null
 }
 
 export type Post = {
@@ -14,12 +13,12 @@ export type Post = {
   message?: string,
   imagePost?: string,
   author: string,
-  authorId?: number,
-  createAt?: FormData
+  authorId: number,
+  createAt?: string
 }
 
 export type News = {
   id?: number,
   title: string,
-  createAt?: FormData
+  createAt?: string
 }
