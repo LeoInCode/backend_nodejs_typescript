@@ -1,4 +1,4 @@
-# Desenvolvendo uma API com Node + TypeScript utilizando JWT
+# Desenvolvendo uma API com Node + TypeScript utilizando JWT e MySQL
 
 Após concluir a Formação Node.js com Express da Alura, resolvi por em prática os conceitos aprendidos. Então, resolvi desenvolver uma API usando Node + TypeScript. O código foi desenvolvido inteiramente do zero, tendo usado como base apenas a autênticação jwt aprendida, e então, adaptada para atender as necessidades da minha API.
 
