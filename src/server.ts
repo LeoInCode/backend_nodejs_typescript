@@ -1,7 +1,7 @@
 import * as dotenv from "dotenv";
 dotenv.config({ path: '.env' });
-require('./infraestracture/redis/blocklistAccessToken')
-require('./infraestracture/redis/allowlistRefreshToken')
+import './infraestracture/redis/blocklistAccessToken'
+import './infraestracture/redis/allowlistRefreshToken'
 
 import conection from './infraestracture/database/conection'
 import Tables from './infraestracture/database/tables'

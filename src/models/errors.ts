@@ -12,14 +12,6 @@ class InternalServerError extends Error {
   }
 }
 
-class NotFound extends Error {
-  constructor (entidade: string) {
-    const mensagem = `Não foi possível encontrar ${entidade}`
-    super(mensagem)
-    this.name = 'NotFound'
-  }
-}
-
 class NotAuthorized extends Error {
   constructor () {
     const mensagem = 'Não foi possível acessar esse recurso'
@@ -28,4 +20,4 @@ class NotAuthorized extends Error {
   }
 }
 
-export default { InvalidArgumentError, InternalServerError, NotFound, NotAuthorized }
+export default { InvalidArgumentError, InternalServerError, NotAuthorized }
