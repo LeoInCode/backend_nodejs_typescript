@@ -62,7 +62,3 @@ export const listByAuthor = async (req: Request, res: Response) => {
     return res.status(400).json(error);
   }
 }
-
-function newFunction(req) {
-  if (req.user.id) { }
-}

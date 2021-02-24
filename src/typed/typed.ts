@@ -15,11 +15,11 @@ export type Post = {
   imagePost?: string,
   author: string,
   authorId?: number,
-  createAt?: Date
+  createAt?: FormData
 }
 
 export type News = {
   id?: number,
   title: string,
-  createAt?: Date
+  createAt?: FormData
 }
