@@ -13,5 +13,4 @@ usersRoute.route('/users/logout').post([authenticationMiddleware.refresh, authen
 usersRoute.route('/users/:id').delete([authenticationMiddleware.bearer, authenticationMiddleware.local], deletetUser)
 usersRoute.route('/users/verify_email/:token').get(authenticationMiddleware.verifyEmail, verifyEmail)
 usersRoute.route('/users/refresh_token').post(authenticationMiddleware.refresh, login)
-usersRoute.route('/users/refresh_token').post(authenticationMiddleware.refresh, login)
 export default usersRoute
